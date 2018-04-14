@@ -1,11 +1,11 @@
 package br.unb.cic.epl
 
-package object Eval { 
+package object Height { 
   trait Expression extends Core.Expression {
-    def eval(): Int
+    def height(): Int
   }
 
   trait Literal extends Core.Literal with Expression {
-    override def eval() = value
+    override def height() = 1
   }
 }
